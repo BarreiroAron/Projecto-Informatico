@@ -12,7 +12,7 @@ function App() {
   // useEffect, cuando se cargue un nuevo post lo que va a hacer es actualizarse para mostrar el post
   useEffect(() => {
     //el localStorage.getItem se usa para recuperar el valor asociado con una clave en el almacenamiento local
-    //y agarramos los datos que tienen los arrayGuardado Titulo, Autor y Post dad
+    //y agarramos los datos que tienen los arrayGuardado Titulo, Autor y Post
     const Titulo = localStorage.getItem('arrayGuardadoTitulo');
     const Autor = localStorage.getItem('arrayGuardadoAutor');
     const Post = localStorage.getItem('arrayGuardadoPost');
