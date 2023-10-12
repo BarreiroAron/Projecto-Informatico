@@ -46,6 +46,7 @@ import { Link } from 'react-router-dom';
         <button type="button" onClick={IniciarTodo}>
           Publicar
         </button>
+            <h1>Hola</h1>
       </form>
 
   </>
