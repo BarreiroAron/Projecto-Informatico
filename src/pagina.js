@@ -9,7 +9,6 @@ El style es para agregar css a la app
 el <link to="/" va a estar en publicacion, que ahi vas si apretas en "Nuevo post" que es lo que esta aca
 si vas al codigo de publicacion vas a ver un <link to="/" que al apretarlo te hubica aca
 */}
-
   return (
     <>
       <div style={{ backgroundColor: 'purple', padding: '1px' }}>
