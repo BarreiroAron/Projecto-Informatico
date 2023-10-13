@@ -9,7 +9,7 @@ export default function Posteos(props) {
             <h2>Titulo: {item}</h2>
             <h3>Autor: {arrayGuardadoAutor[index]}</h3>
             <p>{arrayGuardadoPost[index]}</p>
-            {/* <h1 style={{ height: "10px", backgroundColor: "purple" }}></h1> */}
+            <h1 style={{ height: "10px", backgroundColor: "purple" }}></h1>
           </div>
         ))}
       </div>
