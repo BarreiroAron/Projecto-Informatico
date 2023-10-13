@@ -1,40 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-
-function Comentarios() {
-    const [Autor, setAutor] = useState("");
-    const [arrayGuardadoAutor, setArrayGuardadoAutor] = useState([]);
-  
-    function GuardarAutor() {
-      if (Autor) {
-        setArrayGuardadoAutor([...arrayGuardadoAutor, Autor]);
-        setAutor("");
-      }
-    }
-
-
-
-      const [Resp, setResp] = useState("");
-      const [arrayGuardadoResp, setArrayGuardadoResp] = useState([]);
+    function Comentarios() {
+      const [Autor, setAutor] = useState("");
+      const [Comentario, setComentario] = useState("");
     
-      function GuardarResp() {
-        if (Resp) {
-          setArrayGuardadoResp([...arrayGuardadoResp, Resp]);
-          setResp("");
-        }
-      }
-
-
       function IniciarTodo() {
-        GuardarAutor()
-        GuardarResp()
+        
+        setAutor("");
+        setComentario("");
       }
-
-
-
   return (
     <>
-    <div>
+      <form>
         <input
           placeholder="Autor"
           type="text"
@@ -42,20 +20,20 @@ function Comentarios() {
           onChange={(ev) => setAutor(ev.target.value)}
         ></input>
 
-
         <textarea
-          placeholder="Respuesta"
+          placeholder="Comentario"
           type="text"
-          value={Resp}
-          onChange={(ev) => setResp(ev.target.value)}
-          style={{ height: "50px", width: "50%" }}
+          value={Comentario}
+          onChange={(ev) => setComentario(ev.target.value)}
+          style={{ height: "200px", width: "100%" }}
         ></textarea>
 
 
         <button type="button" onClick={IniciarTodo}>
           Enviar
         </button>
-      </div>
+      </form>
+
   </>
   );
 }
