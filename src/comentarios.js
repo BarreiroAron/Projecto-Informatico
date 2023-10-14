@@ -48,10 +48,7 @@ function Comentarios(props) {
       <div>
         <h1>Titulo: {titulo}</h1>
         <h3>Autor: {autor}</h3>
-        <p>
-        Post:
-        <ReactMarkdown>{post}</ReactMarkdown>
-        </p>
+        <p> <ReactMarkdown>{post}</ReactMarkdown> </p>
       </div>
 
       <form>
@@ -75,7 +72,7 @@ function Comentarios(props) {
         </button>
       </form>
       <div>
-        {comentariosRenderizados}
+      {comentariosRenderizados}
       </div>
     </>
   );

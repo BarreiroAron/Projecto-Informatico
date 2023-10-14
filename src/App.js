@@ -1,8 +1,9 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Pagina from './pagina.js';
 import PostCompleto from './publicacion.js';
 import React, { useState, useEffect } from "react";
 import Comentarios from './comentarios.js';
+import Admin from './Admin.js';
 
 function App() {
   const [arrayGuardadoTitulo, setArrayGuardadoTitulo] = useState([]);
@@ -46,19 +47,20 @@ function App() {
     setArrayGuardadoPost([...arrayGuardadoPost, post]);
   }
 
+  const [admin, setAdmin] = useState(false)
   
 
   return (
     <>
       <Routes>
         
-        <Route exact path="/" element={<Pagina arrayGuardadoTitulo={arrayGuardadoTitulo} arrayGuardadoAutor={arrayGuardadoAutor} arrayGuardadoPost={arrayGuardadoPost}  />} />
-        
+        <Route exact path="/" element={<Pagina arrayGuardadoTitulo={arrayGuardadoTitulo} 
+           arrayGuardadoAutor={arrayGuardadoAutor} arrayGuardadoPost={arrayGuardadoPost}  />} />
         <Route
           exact path="/publicacion"
           element={<PostCompleto guardarDatos={guardarDatos} />}
         />
-
+        <Route path="/admin" element={<Admin setAdmin={setAdmin} />} />
         <Route
         path="/comentarios/:postIndex"
         element={

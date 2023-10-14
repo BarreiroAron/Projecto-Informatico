@@ -11,14 +11,19 @@ el <link to="/" va a estar en publicacion, que ahi vas si apretas en "Nuevo post
 si vas al codigo de publicacion vas a ver un <link to="/" que al apretarlo te hubica aca
 */
 
-  const { arrayGuardadoTitulo, arrayGuardadoAutor, arrayGuardadoPost } = props;
+  const { arrayGuardadoTitulo, arrayGuardadoAutor, arrayGuardadoPost, Admin } = props;
 
 
   return (
     <>
-      <div style={{ backgroundColor: 'purple', padding: '1px' }}>
-        <h1>Home</h1>
-        <h2> <Link to="/publicacion" style={{ textDecoration: 'none', color: 'white'}}>Nuevo Post</Link> </h2>
+      <div style={{ backgroundColor: 'purple', padding: '1px', border: '5px solid' }}>
+        <h1 style={{textAlign: 'center'}}>Home</h1>
+        <h1 style={{ textAlign: 'center'}}> <Link to="/publicacion" style={{ textDecoration: 'none', color: 'white'}}>Nuevo Post</Link> </h1>
+        {Admin && (
+          <>
+          <h2>MODO ADMIN</h2>
+          </>
+          )}
         </div>
         <Posteos  
           arrayGuardadoTitulo={arrayGuardadoTitulo}
