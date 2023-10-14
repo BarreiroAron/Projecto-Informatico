@@ -1,8 +1,8 @@
-import ReactDOM from 'react-dom';
 import { Routes, Route } from 'react-router-dom';
 import Pagina from './pagina.js';
 import PostCompleto from './publicacion.js';
 import React, { useState, useEffect } from "react";
+import Comentarios from './comentarios.js';
 
 function App() {
   const [arrayGuardadoTitulo, setArrayGuardadoTitulo] = useState([]);
@@ -46,33 +46,35 @@ function App() {
     setArrayGuardadoPost([...arrayGuardadoPost, post]);
   }
 
-  function Posteos() {
-    return (
-      <div>
-        {arrayGuardadoTitulo.map((item, index) => (
-          <div key={index}>
-            <h2>Titulo: {item}</h2>
-            <h3>Autor: {arrayGuardadoAutor[index]}</h3>
-            <p>{arrayGuardadoPost[index]}</p>
-            <h1 style={{ height: "10px", backgroundColor: "purple" }}></h1>
-          </div>
-        ))}
-      </div>
-    );
-  }
+  
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Pagina />} />
+        
+        <Route exact path="/" element={<Pagina arrayGuardadoTitulo={arrayGuardadoTitulo} arrayGuardadoAutor={arrayGuardadoAutor} arrayGuardadoPost={arrayGuardadoPost}  />} />
+        
         <Route
-          path="/publicacion"
+          exact path="/publicacion"
           element={<PostCompleto guardarDatos={guardarDatos} />}
         />
+
+        <Route
+        path="/comentarios/:postIndex"
+        element={
+        <Comentarios
+        arrayGuardadoTitulo={arrayGuardadoTitulo}
+        arrayGuardadoAutor={arrayGuardadoAutor}
+        arrayGuardadoPost={arrayGuardadoPost}
+        /> }
+        />
+
       </Routes>
-      <Posteos />
+      {/* <Posteos /> */}
     </>
   );
 }
+
+ 
 
 export default App;
