@@ -12,7 +12,7 @@ export default function Posteos(props) {
           </Link>
           <h3>Autor: {arrayGuardadoAutor[index]}</h3>
           {admin && (
-            <button onClick={() => borrar(index)}>Borrar</button>
+          <button onClick={() => borrar(index)}>Borrar</button>
           )}
         </div>
       ))}

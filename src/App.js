@@ -53,7 +53,6 @@ function App() {
   return (
     <>
       <Routes>
-        
         <Route exact path="/" element={<Pagina arrayGuardadoTitulo={arrayGuardadoTitulo} 
            arrayGuardadoAutor={arrayGuardadoAutor} arrayGuardadoPost={arrayGuardadoPost}  />} />
         <Route
@@ -72,7 +71,6 @@ function App() {
         />
 
       </Routes>
-      {/* <Posteos /> */}
     </>
   );
 }
