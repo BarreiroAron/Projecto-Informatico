@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function Posteos(props) {
-  const { arrayGuardadoTitulo, arrayGuardadoAutor, arrayGuardadoPost, admin, borrar } = props;
+  const { arrayGuardadoTitulo, arrayGuardadoAutor, admin, borrar } = props;
 
   return (
     <div>

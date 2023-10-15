@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Pagina from './pagina.js';
 import PostCompleto from './publicacion.js';
 import React, { useState, useEffect } from "react";
@@ -47,7 +47,7 @@ function App() {
     setArrayGuardadoPost([...arrayGuardadoPost, post]);
   }
 
-  const [admin, setAdmin] = useState(false)
+  const [ ,setAdmin] = useState(false)
   
 
   return (
