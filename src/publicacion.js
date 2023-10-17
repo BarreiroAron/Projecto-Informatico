@@ -39,7 +39,7 @@ import { Link } from 'react-router-dom';
           type="text"
           value={Post}
           onChange={(ev) => setPost(ev.target.value)}
-          style={{ height: "200px", width: "100%" }}
+          style={{ height: "200px", width: "100%", resize: "none" }}
         ></textarea>
 
 
