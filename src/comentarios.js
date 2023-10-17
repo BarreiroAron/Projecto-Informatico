@@ -64,7 +64,7 @@ function Comentarios(props) {
           type="text"
           value={Comentario}
           onChange={(ev) => setComentario(ev.target.value)}
-          style={{ height: "200px", width: "100%" }}
+          style={{ height: "200px", width: "100%", resize: "none" }}
         ></textarea>
 
         <button type="button" onClick={IniciarTodo}>
