@@ -47,14 +47,14 @@ function App() {
     setArrayGuardadoPost([...arrayGuardadoPost, post]);
   }
 
-  const [ ,setAdmin] = useState(false)
+  const [admin ,setAdmin] = useState(false)
   
 
   return (
     <>
       <Routes>
         <Route exact path="/" element={<Pagina arrayGuardadoTitulo={arrayGuardadoTitulo} 
-           arrayGuardadoAutor={arrayGuardadoAutor} arrayGuardadoPost={arrayGuardadoPost}  />} />
+           arrayGuardadoAutor={arrayGuardadoAutor} admin={admin} arrayGuardadoPost={arrayGuardadoPost}  />} />
         <Route
           exact path="/publicacion"
           element={<PostCompleto guardarDatos={guardarDatos} />}
