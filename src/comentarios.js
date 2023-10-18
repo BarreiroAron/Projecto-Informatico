@@ -53,6 +53,7 @@ function Comentarios(props) {
 
       <form>
         <input
+        style={{ padding: '5px', fontSize: '10px', borderRadius: '5px' }}
           placeholder="Autor"
           type="text"
           value={Autor}
@@ -64,10 +65,10 @@ function Comentarios(props) {
           type="text"
           value={Comentario}
           onChange={(ev) => setComentario(ev.target.value)}
-          style={{ height: "200px", width: "100%" }}
+          style={{ height: "200px", width: "100%", resize: "none", borderRadius: '15px'  }}
         ></textarea>
 
-        <button type="button" onClick={IniciarTodo}>
+        <button type="button" onClick={IniciarTodo} style={{cursor: "pointer", color: 'darkviolet'}}>
           Enviar Comentario
         </button>
       </form>

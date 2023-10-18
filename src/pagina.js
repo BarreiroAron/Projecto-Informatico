@@ -20,7 +20,7 @@ si vas al codigo de publicacion vas a ver un <link to="/" que al apretarlo te hu
         <h1 style={{textAlign: 'center'}}>Home</h1>
         <h1 style={{ textAlign: 'center'}}> <Link to="/publicacion" style={{ textDecoration: 'none', color: 'white'}}>Nuevo Post</Link> </h1>
         {admin && (
-          <h2>MODO ADMIN</h2>
+          <h2 style={{textAlign: 'right', color: 'red'}}>MODO ADMIN >:3</h2>
         )}
         </div>
         <Posteos  

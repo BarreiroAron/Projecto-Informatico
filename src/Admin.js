@@ -23,7 +23,7 @@ function Admin(props) {
           type="password"
           value={pass}
         />
-        <button type="submit">Entrar</button>
+        <button type="submit" style={{cursor: "pointer", color: 'darkviolet'}}>Entrar</button>
       </form>
     </>
   );

@@ -21,13 +21,15 @@ import { Link } from 'react-router-dom';
 
       <form>
         <input
+        style={{ padding: '5px', fontSize: '10px', borderRadius: '5px' }}
           placeholder="Titulo"
           type="text"
           value={Titulo}
           onChange={(ev) => setTitulo(ev.target.value)}
         ></input>
 
-        <input
+        <input 
+        style={{ padding: '5px', fontSize: '10px', borderRadius: '5px' }}
           placeholder="Autor"
           type="text"
           value={Autor}
@@ -39,11 +41,11 @@ import { Link } from 'react-router-dom';
           type="text"
           value={Post}
           onChange={(ev) => setPost(ev.target.value)}
-          style={{ height: "200px", width: "100%" }}
+          style={{ height: "200px", width: "100%", resize: "none", borderRadius: '15px' }}
         ></textarea>
 
 
-        <button type="button" onClick={IniciarTodo}>
+        <button type="button" onClick={IniciarTodo} style={{cursor: "pointer", color: 'darkviolet'}}>
           Publicar
         </button>
       </form>

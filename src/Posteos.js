@@ -1,8 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Posteos(props) {
-  const { arrayGuardadoTitulo, arrayGuardadoAutor, admin, borrar } = props;
+  const { arrayGuardadoTitulo, arrayGuardadoAutor, admin } = props;
 
+  const [localStorageData, setLocalStorageData] = useState('');
+
+  function borrarPost() {
+    console.log(localStorageData)
+      localStorage.removeItem('arrayGuardadoTitulo');
+      localStorage.removeItem('arrayGuardadoAutor');
+      setLocalStorageData('');
+  }
   return (
     <div>
       {arrayGuardadoTitulo.map((item, index) => (
@@ -12,7 +21,7 @@ export default function Posteos(props) {
           </Link>
           <h3>Autor: {arrayGuardadoAutor[index]}</h3>
           {admin && (
-          <button onClick={() => borrar(index)}>Borrar</button>
+          <button onClick={borrarPost} style={{cursor: "pointer", color: 'darkviolet'}}>Borrar</button>
           )}
         </div>
       ))}
