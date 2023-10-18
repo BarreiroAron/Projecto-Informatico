@@ -11,21 +11,6 @@ export default function Posteos(props) {
       localStorage.removeItem('arrayGuardadoAutor');
       setLocalStorageData('');
   }
-{/*
-  function handleSubmit () {
-    e.preventDefault();
-    let nuevoTitulo = { id: arrayGuardadoTitulo.length+1, arrayGuardadoTitulo: nuevoTitulo }
-    let nuevoAutor = { id: arrayGuardadoAutor.length+1, arrayGuardadoAutor: nuevoAutor }
-    let nuevosTitulos = [... arrayGuardadoTitulo, nuevosTitulos]
-    let nuevosAutores = [...arrayGuardadoAutores, nuevosAutores]
-    setarrayGuardadoAutores(nuevosAutores)
-    setarrayGuardadoTitulo(nuevosTitulos)
-    localStorage.setItem('arrayGuardadoAutor', JSON.stringify(nuevosAutores))
-    localStorage.setItem('arrayGuardadoTitulo', JSON.stringify(nuevosTitulos))
-    setarrayGuardadoAutor('')
-    setarrayGuardadoTitulo('')
-  }
-  */}
   return (
     <div>
       {arrayGuardadoTitulo.map((item, index) => (
