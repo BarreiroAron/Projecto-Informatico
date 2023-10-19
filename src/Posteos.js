@@ -5,12 +5,17 @@ export default function Posteos(props) {
   const { arrayGuardadoTitulo, arrayGuardadoAutor, admin } = props;
   const [localStorageData, setLocalStorageData] = useState('') 
 
-  function borrarPost() {
+  function borrarPost(index) {
     console.log(localStorageData)
-      localStorage.removeItem('arrayGuardadoTitulo');
-      localStorage.removeItem('arrayGuardadoAutor');
-      setLocalStorageData('');
+    const nuevosTitulos = [...arrayGuardadoTitulo];
+    const nuevosAutores = [...arrayGuardadoAutor];
+    nuevosTitulos.splice(index, 1);
+    nuevosAutores.splice(index, 1);
+    localStorage.setItem('arrayGuardadoTitulo', JSON.stringify(nuevosTitulos));
+    localStorage.setItem('arrayGuardadoAutor', JSON.stringify(nuevosAutores));
+    setLocalStorageData('');
   }
+  
   return (
     <div>
       {arrayGuardadoTitulo.map((item, index) => (
